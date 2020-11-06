@@ -1,0 +1,37 @@
+[package]
+name = "ibeacon"
+version = "0.1.0"
+authors = ["Bob McWhirter <bmcwhirt@redhat.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.6.3"
+cortex-m-rt = "0.6.13"
+rtt-target = {version = "0.2.1", features = ["cortex-m"] }
+#panic-rtt-target = { version = "0.1.1", features = ["cortex-m"] }
+cortex-m-rtic = "0.5.5"
+stm32l4xx-hal = { path = "../../../stm32l4xx-hal", features = ["stm32l4x5", "rt"] }
+log = "0.4.11"
+heapless = "0.5.5"
+rtt-logger = "0.1.0"
+#drogue-es-wifi = { path = "../drogue-es-wifi" }
+nb = "1.0.0"
+#embedded-time = "0.10.0"
+embedded-hal = "0.2.4"
+#drogue-embedded-timer = { path = "../drogue-embedded-timer"}
+#drogue-network = "0.2.0"
+#drogue-mpu-6050 = { path = "../drogue-mpu-6050" }
+
+drogue-bluetooth-hci = { path = "../../drogue-bluetooth-hci"}
+drogue-bluetooth-bluenrg = { path = "../../drogue-bluetooth-bluenrg"}
+drogue-bluetooth-ibeacon = { path = "../../drogue-bluetooth-ibeacon"}
+
+#[dependencies.void]
+#version = "1.0.2"
+#default-features = false
+
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.

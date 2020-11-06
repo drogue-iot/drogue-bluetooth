@@ -1,0 +1,12 @@
+[package]
+name = "drogue-bluetooth-ibeacon"
+version = "0.1.0"
+authors = ["Bob McWhirter <bmcwhirt@redhat.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+drogue-bluetooth-hci = { path = "../drogue-bluetooth-hci" }
+drogue-bluetooth-hci-core = { path = "../drogue-bluetooth-hci-core" }
+drogue-bluetooth-hci-macros = { path = "../drogue-bluetooth-hci-macros" }
